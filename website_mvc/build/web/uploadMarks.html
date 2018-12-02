@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title>uploadMarks</title>
+	
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+	.login-box{
+    width: 320px;
+    height: 400px;
+    background-color:#006666;
+    top: 65%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+</style>
+</head>
+    <body>
+    
+	<hr size="2">
+<div style="height:80px;width:100%;background-color:#00b33c;font-family:calibri;font-size:65px;text-align:center;"> Dashboard
+</div>
+<hr size="2">
+
+<div class="abc">
+  <a href="admin_home.html">Home</a>
+  <a href="createStudent.html">Add Student</a>
+  <a class="active" href="uploadMarks.html">Upload/Update Grade</a>
+  <div class="abc-right">
+    <a href="index.html">Logout</a>
+  </div>
+</div>
+<hr size="2">
+    <div class="bg-image"></div>
+	<div class="login-box">
+	<img src="avatar.png" class="avatar">
+	<form id = "new-student-form" action = "uploadmarks" method="POST">
+		<h1> Upload/Update Grade </h1>
+			<center>
+				<table>	
+					<tr>
+						<td>
+							<h3>ID : </h3>
+						</td>
+						<td>
+							<input type="text" placeholder="ID" name = "sid" id = "sid" required>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h3>CGPA : </h3>
+						</td>
+						<td>
+							<input type="text" placeholder="Enter current CGPA" name = "cgpa" id = "cgpa" autofocus required>
+						</td>
+					</table>
+					<br>
+					<input type = "submit" id = "submit" value="submit"><br>
+					</center>
+	</form>
+	</div>
+    </body>
+</html>

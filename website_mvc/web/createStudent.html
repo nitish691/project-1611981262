@@ -1,0 +1,122 @@
+<html>
+<head>
+    <title>createStudent</title>
+	
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+	.login-box{
+    width: 400px;
+    height: 625px;
+    background-color:#006666;
+    top: 90%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+</style>
+<script>
+	function checkMob()
+	{
+		var mob = document.getElementById("mob").value;
+		
+		if(mob >= 1000000000 && mob <= 9999999999)
+		{
+			document.getElementById("submit").style.visibility = "visible";
+		}
+		else
+		{
+			alert("Invalid mobile number.");
+			document.getElementById("submit").style.visibility = "hidden";
+		}
+	}
+</script>
+</head>
+    <body>
+    
+	<hr size="2">
+<div style="height:80px;width:100%;background-color:#00b33c;font-family:calibri;font-size:65px;text-align:center;"> Dashboard
+</div>
+<hr size="2">
+
+<div class="abc">
+  <a href="admin_home.html">Home</a>
+  <a class="active" href="createStudent.html">Add Student</a>
+  <a href="uploadMarks.html">Upload/Update Grade</a>
+  <div class="abc-right">
+    <a href="index.html">Logout</a>
+  </div>
+</div>
+<hr size="2">
+	<div class="bg-image"></div>
+	<div class="login-box">
+	<img src="avatar.png" class="avatar">
+	<form id = "new-student-form" action = "signup" method="POST">
+		<h1> Create New Student Account </h1>
+			<center>
+				<table>
+					<tr>
+						<td>
+							<h3>ID : </h3>
+						</td>
+						<td>
+							<input type="text" placeholder="ID" name = "sid" id = "sid" required>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h3> Password : </h3>
+						</td>
+						<td>
+							<input type="password" placeholder="Password" id = "pwd" name = "pwd" required>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h3> Name : </h3>
+						</td>
+						<td>
+							<input type="text" placeholder="Name" id = "name" name = "name" required>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h3> Mobile Number : </h3>
+						</td>
+						<td>
+							<input type="tel" onchange = "checkMob()" placeholder="Mobile Number" id = "mob" name = "mob" required>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h3> Email : </h3>
+						</td>
+						<td>
+							<input type="email" placeholder="Email ID" id = "email" name = "email" required>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h3> Father's Name : </h3>
+						</td>
+						<td>
+							<input type="text" placeholder="Father's Name" id = "fname" name = "fname" required>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h3> Mother's Name : </h3>
+						</td>
+						<td>
+							<input type="text" placeholder="Mother's Name :" id = "mname" name = "mname" required>
+						</td>
+					</tr>
+					</table>
+					<br>
+					<input type = "submit" id = "submit" value="submit"><br>
+					</center>
+	</form>
+	</div>
+    </body>
+</html>
